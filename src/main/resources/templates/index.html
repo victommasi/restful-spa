@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<title>Index.html</title>
+
+	<link rel="stylesheet" type="text/css" href="/layout/stylesheets/vendors.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/layout/stylesheets/algaworks.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/layout/stylesheets/application.css"/>
+	
+	<script type="text/javascript" src="/layout/vendors/angular/angular1.4.js"></script>
+	<script type="text/javascript" src="/layout/vendors/angular/angular-resource.js"></script>
+	<script type="text/javascript" src="/layout/vendors/angular/angular-route.js"></script>
+	<script type="text/javascript" src="/layout/javascripts/vendors.min.js"></script>
+	<script type="text/javascript" src="/layout/javascripts/algaworks.min.js"></script>
+	<script type="text/javascript" src="/javascripts/app.js"></script>
+	<script type="text/javascript" src="/javascripts/customer-service.js"></script>
+	<script type="text/javascript" src="/javascripts/customer-controller.js"></script>
+	
+</head>
+<body ng-app="myApp">
+
+<div class="aw-layout-page">
+	
+	<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar">
+	  <div class="container-fluid">
+
+	    <div class="navbar-header">
+	      <a class="navbar-brand  hidden-xs" href="#">
+	        <img alt="AlgaWorks" th:src="@{/layout/images/logo.png}"/>
+	      </a>
+
+	      <ul class="nav  navbar-nav">
+	        <li>
+	          <a href="#" class="js-sidebar-toggle"><i class="fa fa-lg fa-bars"></i></a>
+	        </li>
+	      </ul>
+	    </div>
+
+	    <ul class="nav navbar-nav  navbar-right">
+	    
+	      <li>
+	        <a href="#" class="js-search-modal-trigger-show"><i class="fa fa-lg fa-search"></i></a>
+	      </li>
+	      
+	      <li class="dropdown">
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+	          <i class="fa fa-lg fa-envelope"></i> <span class="label  label-danger  aw-label-corner">48</span>
+	        </a>
+	                  
+	        <ul class="dropdown-menu">
+	          <li><a href="javascript:;">Item 1</a></li>
+	          <li><a href="javascript:;">Item 2</a></li>
+	        </ul>
+	      </li>
+	      
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+	          <i class="fa fa-lg fa-user"></i>
+	        </a>
+	        
+	        <ul class="dropdown-menu">
+	          <li>
+	            <div class="aw-logged-user">
+	              <img src="https://api.adorable.io/avatars/80/joaodascouves" 
+	                width="80" height="80" alt="João das Couves" class="aw-logged-user__picture" />
+	              <span class="aw-logged-user__name">João das Couves</span>
+	            </div>
+	          </li>
+	          <li role="separator" class="divider"></li>
+	          <li><a href="#">Meu perfil</a></li>
+	          <li><a href="#">Alterar senha</a></li>
+	          <li><a href="#">Pagamentos</a></li>
+	        </ul>
+	      </li>
+	      
+	      <li>
+	        <a href="#"><em class="fa fa-lg fa-sign-out"></em></a>
+	      </li> 
+	    </ul>
+
+	  </div>
+	</nav>
+	
+	<aside class="aw-layout-sidebar  js-sidebar">
+		<div class="aw-layout-sidebar__content">
+	
+	    	<nav class="aw-menu  js-menu">
+	      		<ul class="aw-menu__list">
+	        		
+	        		<li class="aw-menu__item">
+          			<a href="#search">
+          				<i class="fa  fa-lg  fa-home"></i>
+          				<span>Página inicial</span>
+          			</a>
+	        		</li>
+	        		
+	        		<li class="aw-menu__item">
+          			<a href="#customer/new">
+          				<i class="fa  fa-lg  fa-plus-circle"></i>
+          				<span>Cadastrar cliente</span>
+          			</a>
+	        		</li>
+	        		
+	        		<li class="aw-menu__item">
+          			<a href="#403">
+          				<i class="fa  fa-lg  fa-arrow-circle-o-right"></i>
+          				<span>403</span>
+          			</a>
+	        		</li>
+	        		
+	        		<li class="aw-menu__item">
+          			<a href="#404">
+          				<i class="fa  fa-lg  fa-arrow-circle-o-right"></i>
+          				<span>404</span>
+          			</a>
+	        		</li>
+	        		
+	        		<li class="aw-menu__item">
+          			<a href="#500">
+          				<i class="fa  fa-lg  fa-arrow-circle-o-right"></i>
+          				<span>500</span>
+          			</a>
+	        		</li>
+	
+	      	</ul>
+	    	</nav>
+		</div>
+	</aside>
+		
+		<section class="ng-view aw-layout-content js-content"></section>
+	
+	<footer class="aw-layout-footer  js-content">
+		<div class="container-fluid">
+			<span class="aw-footer-disclaimer">&copy; 2016 AlgaWorks. Todos os direitos reservados.</span>
+		</div>
+	</footer>
+</div>
+</body>
+</html>
